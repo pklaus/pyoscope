@@ -27,7 +27,7 @@ RIGOL_N_DIVS = 12
 RAW_DATA_LENGTH = 9000
 
 class RigolScope(Scope):
-    '''Class to control a Rigol DS1000 series oscilloscope''
+    '''Class to control a Rigol DS1000 series oscilloscope'''
     def __init__(self, device):
         '''Initialize Hardware'''
         try:
