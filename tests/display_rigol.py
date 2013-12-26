@@ -35,7 +35,7 @@ elif (time[599] < 1):
 else:
     tUnit = "S"
 
-# close interface
+scope.unlock()
 scope.close()
  
 # Plot the data
