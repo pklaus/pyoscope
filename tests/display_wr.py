@@ -13,10 +13,8 @@ import numpy
 from matplotlib import pyplot
 import sys
 import os
-sys.path.append(os.path.expanduser('~/Source'))
-sys.path.append(os.path.expanduser('~/src'))
-sys.path.append('/var/local/src')
-from pyoscope import Waverunner
+sys.path.append(os.path.expanduser('.'))
+from waverunner import Waverunner
 
 """ Example program to plot the Y-T data from one scope channel
     derived from capture_channel_1.py but using new interface methods """
