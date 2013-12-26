@@ -13,13 +13,11 @@ import numpy
 from matplotlib import pyplot
 import sys
 import os
-sys.path.append(os.path.expanduser('~/Source'))
-sys.path.append(os.path.expanduser('~/src'))
-sys.path.append('/var/local/src')
-from pyoscope import RigolScope
+sys.path.append(os.path.expanduser('.'))
+from rigol import RigolScope
 
 # Initialize our scope
-scope = RigolScope("/dev/usbtmc-rigol")
+scope = RigolScope("/dev/usbtmc0")
 scope.grabData()
 data1 = scope.getScaledWaveform(1)
 data2 = scope.getScaledWaveform(2)
