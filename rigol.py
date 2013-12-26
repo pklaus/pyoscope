@@ -188,7 +188,7 @@ class RigolScope(Scope):
 
 if __name__ == "__main__":
     print "# RigolScope Test #"
-    scope = RigolScope("/dev/usbtmc-rigol")
+    scope = RigolScope("/dev/usbtmc0")
     scope.grabData()
     scope.writeWaveformToFile("out.dat")
     scope.close()
