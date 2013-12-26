@@ -10,9 +10,9 @@ import sys
 import os
 from matplotlib import pyplot
 sys.path.append(os.path.expanduser('.'))
-from oscope import RigolScope
-from oscope import Waverunner
-from oscope import makeDataFilePath
+from rigol import RigolScope
+from waverunner import Waverunner
+from utils import makeDataFilePath
 """ Capture data from Rigol oscilloscope and write to a file 
     usage: python get_data.py <filename>
     if filename is not given STDOUT will be used"""
@@ -29,8 +29,8 @@ if filename == "--help":
     sys.exit(1)
 
 print filename
-#scope = RigolScope("/dev/usbtmc0")
-scope = Waverunner(SCOPE_ADDRESS)
+scope = RigolScope("/dev/usbtmc0")
+#scope = Waverunner(SCOPE_ADDRESS)
 scope.grabData()
 scope.writeWaveformToFile(filename)
 scope.close()
