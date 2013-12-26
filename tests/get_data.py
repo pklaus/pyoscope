@@ -9,14 +9,12 @@ import numpy
 import sys
 import os
 from matplotlib import pyplot
-sys.path.append(os.path.expanduser('~/Source'))
-sys.path.append(os.path.expanduser('~/src'))
-sys.path.append('/var/local/src')
-from pyoscope import RigolScope
-from pyoscope import Waverunner
-from pyoscope import makeDataFilePath
+sys.path.append(os.path.expanduser('.'))
+from oscope import RigolScope
+from oscope import Waverunner
+from oscope import makeDataFilePath
 """ Capture data from Rigol oscilloscope and write to a file 
-    usage: python save_channel.py <filename>
+    usage: python get_data.py <filename>
     if filename is not given STDOUT will be used"""
 
 SCOPE_ADDRESS = 'nigpib1'
