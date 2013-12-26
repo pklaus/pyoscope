@@ -14,7 +14,10 @@
 '''
 import numpy
 from matplotlib import pyplot
-from pyusbtmc import RigolScope
+import sys
+import os
+sys.path.append(os.path.expanduser('.'))
+from rigol import RigolScope
 import time
 
 # Initialize our scope
