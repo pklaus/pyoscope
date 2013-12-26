@@ -33,5 +33,6 @@ scope = RigolScope("/dev/usbtmc0")
 #scope = Waverunner(SCOPE_ADDRESS)
 scope.grabData()
 scope.writeWaveformToFile(filename)
+scope.unlock()
 scope.close()
 
