@@ -28,7 +28,7 @@ matplotlib
 
 Setup USB permissions for udev
 ------------------------------
-echo 'ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="1ab1", ATTR{idProduct}=="0588", GROUP:="adm"' > tmpfile
+echo 'ACTION=="add", SUBSYSTEMS=="usb", ATTRS{idVendor}=="1ab1", ATTRS{idProduct}=="0588", GROUP="adm"' > tmpfile
 sudo chown root:root tmpfile
 sudo chmod 644 tmpfile
 sudo mv tmpfile /etc/udev/rules.d/10-rigol.rules
@@ -41,6 +41,6 @@ On my DS1102E the WAVE:POINT:MODE options seem to have no effect.  Maybe the fir
 udev can add more symlinks with SYMLINK+="usbtmc-newname"
 
 new udev rules
-ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="164e", ATTR{idProduct}=="0fa2", GROUP:="adm", SYMLINK+="usbtmc-bnc645"
-ACTION=="add", SUBSYSTEM=="usb", ATTR{idVendor}=="1ab1", ATTR{idProduct}=="0588", GROUP:="adm", SYMLINK+="usbtmc-rigol"
+ACTION=="add", SUBSYSTEMS=="usb", ATTRS{idVendor}=="164e", ATTRS{idProduct}=="0fa2", GROUP:="adm", SYMLINK+="usbtmc-bnc645"
+ACTION=="add", SUBSYSTEMS=="usb", ATTRS{idVendor}=="1ab1", ATTRS{idProduct}=="0588", GROUP:="adm", SYMLINK+="usbtmc-rigol"
 
